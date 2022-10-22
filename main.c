@@ -1,5 +1,5 @@
 // CS2600 - Andrew Jujun
-#include <stdlib.h>
+#include "resto_functions.h"
 
 int main(int argc, char const *argv[])
 {
@@ -8,8 +8,10 @@ int main(int argc, char const *argv[])
   // 2. Create menu table/map storing meals
   // 3. Implement random meal logic
   // 4. Display meal cost, tax amount, tip amount, and total bill 
+  extern const int MENU_SIZE;
+  char *ptr;
 
-  /* code */
+  display_bill(randomize_menu(MENU_SIZE), strtod(argv[1], &ptr), strtod(argv[2], &ptr));
+  
   return EXIT_SUCCESS;
 }
-
