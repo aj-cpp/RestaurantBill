@@ -11,7 +11,9 @@ int main(int argc, char const *argv[])
   extern const int MENU_SIZE;
   char *ptr;
 
-  display_bill(randomize_menu(MENU_SIZE), strtod(argv[1], &ptr), strtod(argv[2], &ptr));
+  display_bill(randomize_menu(MENU_SIZE), 
+               strtod(argv[1], &ptr), 
+               strtod(argv[2], &ptr));
   
   return EXIT_SUCCESS;
 }
